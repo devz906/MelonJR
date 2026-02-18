@@ -231,7 +231,7 @@ jobs:
 
       - name: Upload build log
         if: steps.find_project.outputs.project_path != ''
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ios-build-log
           path: build.log
@@ -248,7 +248,7 @@ jobs:
 
       - name: Upload Unsigned IPA artifact
         if: steps.find_project.outputs.project_path != ''
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: MelonJR-unsigned-ipa
           path: ipa-out/*
